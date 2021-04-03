@@ -15,6 +15,6 @@ public class SimpleApplication {
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot! 2";
+        return "Greetings from Spring Boot!";
     }
 }
