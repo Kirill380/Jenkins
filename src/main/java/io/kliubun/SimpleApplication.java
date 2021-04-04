@@ -1,6 +1,7 @@
 package io.kliubun;
 
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.S3Object;
@@ -32,6 +33,7 @@ public class SimpleApplication {
     public void init() {
        s3 = AmazonS3ClientBuilder.standard()
                 .withCredentials(InstanceProfileCredentialsProvider.getInstance())
+                .withRegion(Regions.EU_CENTRAL_1)
                 .build();
 
     }
