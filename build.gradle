@@ -13,6 +13,9 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation 'com.amazonaws:aws-java-sdk:1.11.163'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
