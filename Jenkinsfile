@@ -19,6 +19,7 @@ pipeline {
                        verbose: true,
                        transfers: [
                             sshTransfer(sourceFiles: 'simple.jar'),
+                            sshTransfer(execCommand: "ps aux | grep java | grep -v grep | awk '{print \\"kill -9 \\" $2}' | sh ")
                             sshTransfer(execCommand: "java -jar simple.jar &")
                        ]
                     )
